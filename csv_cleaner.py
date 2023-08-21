@@ -14,6 +14,8 @@ import datetime
 from argparse import ArgumentParser
 import pandas as pd
 
+# global variables
+KEEP_COLUMNS_FILE = "keep_columns.txt"
 TS = datetime.datetime.now().strftime("%Y%m%d-%H%M%S")
 
 def parse_csv(input_csv, output_csv) -> str:
@@ -29,7 +31,7 @@ def parse_csv(input_csv, output_csv) -> str:
     """
 
     # read in the list of columns to keep
-    with open("keep_columns.txt", 'r', encoding='utf-8') as keep_cloumns_file:
+    with open(KEEP_COLUMNS_FILE, 'r', encoding='utf-8') as keep_cloumns_file:
         keep_columns = keep_cloumns_file.read().splitlines()
 
     print(f"\nKeeping the following list of columns: {keep_columns}")
@@ -51,9 +53,10 @@ def __main__():
 
     argparse.add_argument("-i", "--input", required=True, type=str, help="input csv file")
     argparse.add_argument("-o", "--output", required=False, type=str, help="output csv file")
+    args = argparse.parse_args()
 
-    input_csv = argparse.parse_args().input
-    output_csv = argparse.parse_args().output
+    input_csv = args.input
+    output_csv = args.output
 
     if not output_csv:
         print("No output file specified, using default output file name.")
