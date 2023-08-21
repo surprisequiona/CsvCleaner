@@ -1,0 +1,9 @@
+resolve.env/
+.Python
+.idea/
+.dev_notes/
+bin/
+include/
+lib/
+pip-selfcheck.json
+resolv.env/
