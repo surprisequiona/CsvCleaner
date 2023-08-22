@@ -3,7 +3,8 @@ Clean CSV columns for less noise
 
 ## Requirements
 * **Python 3.5+**
-
+* **pandas 1.5.3**
+* **ipaddress 1.0+**
 * **keep_columns.txt**: list of columns to keep
 
 ## Installation
