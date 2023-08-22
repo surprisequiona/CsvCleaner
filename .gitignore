@@ -2,6 +2,7 @@ resolve.env/
 .Python
 .idea/
 .dev_notes/
+.testassets/
 bin/
 include/
 lib/
