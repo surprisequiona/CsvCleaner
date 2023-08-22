@@ -1,5 +1,9 @@
 """
-Copyright (c) 2017-2021, Zach Jetson All rights reserved.
+Copyright (c) 2023, Thomas Wenzke, All rights reserved
+
+Heavily edited based on work by Zach Jetson:
+https://github.com/subfission
+
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
